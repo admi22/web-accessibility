@@ -4,7 +4,7 @@ Group project for the course "Web and Mobile Accessibility" at UZH.
 
 ### Members:
 - Alain Küng (xx-xxx-xxx)
-- Ivo Aeschlimann (xx-xxx-xxx)
+- Ivo Aeschlimann (16-920-803)
 - Lara Fried (xx-xxx-xxx)
 - Melanie Salzer (xx-xxx-xxx)
 - Michael Blum (17-717-232)
