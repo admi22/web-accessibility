@@ -10,11 +10,11 @@ html {
 body a,
 body div,
 body p {
-    color: #dfdfdf
+    /* color: #dfdfdf */
 }
 
 body a:hover {
-    color: #cdcdcd
+    /* color: #cdcdcd */
 }
 
 .title {

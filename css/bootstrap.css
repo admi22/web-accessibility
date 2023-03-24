@@ -4062,7 +4062,7 @@ tbody.collapse.show {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: hsla(0, 0%, 100%, .5)
+    color: hsla(0, 0%, 100%, 1)
 }
 
 .navbar-dark .navbar-nav .nav-link:focus,
@@ -8184,7 +8184,7 @@ button.bg-dark:hover {
 }
 
 .text-primary {
-    color: #4b6660 !important
+    color: #1a1a1a !important
 }
 
 a.text-primary:focus,
