@@ -48,3 +48,26 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.navbar-toggler')
         .addEventListener('click', toggleNavigation, false);
 }, false);
+
+
+/**
+ * Allow user to increase and decrease the global font size
+ */
+function increaseFontSize() {
+    var fontSize = parseInt(document.body.style.fontSize) || 100;
+    fontSize += 10;
+    document.body.style.fontSize = fontSize + '%';
+}
+
+function decreaseFontSize() {
+    var fontSize = parseInt(document.body.style.fontSize) || 100;
+    fontSize -= 10;
+    document.body.style.fontSize = fontSize + '%';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.font-increase-button')
+        .addEventListener('click', increaseFontSize, false);
+    document.querySelector('.font-decrease-button')
+        .addEventListener('click', decreaseFontSize, false);
+}, false);

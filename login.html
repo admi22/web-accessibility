@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-light">
-    <div class="container-fluid d-none d-lg-block my-4 header">
+    <header class="container-fluid d-none d-lg-block my-4 header">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-8 media">
@@ -33,9 +33,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div class="container-fluid bg-dark nav">
+    <nav class="container-fluid bg-dark nav">
         <div class="container">
             <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
                 <div class="navbar-brand d-lg-none">
@@ -117,32 +117,32 @@
                 </div>
             </div>
         </div>
-    </div>
+    </nav>
 
-    <div class="container main" id="main">
+    <main class="container main" id="main">
         <div class="row no-gutters">
             <div class="col-12 col-md-5 mt-4 login">
                 <div class="p-4 mr-md-3 bg-white">
-                    <div class="text-primary mb-4 title">Login</div>
+                    <h1 class="text-primary mb-4 title">Login</h1>
                     <div class="text-danger mb-4 d-none subtitle" id="login-error">Please correct the error(s)</div>
                     <ul class="sr-only" id="login-error-list"></ul>
                     <form id="login-form" novalidate>
                         <div class="form-group">
-                            <input class="form-control" id="login-email-control" type="email" placeholder="Email" required style="position: relative; top: 10px;">
-                            <p style="position: relative; top: -60px;">Email</p>
+                            <label for="login-email-control">Email</label>
+                            <input class="form-control" id="login-email-control" type="email" placeholder="Email" required>
                             <small class="invalid-feedback"></small>
                         </div>
                         <div class="form-group">
-                            <input class="form-control" id="login-password-control" type="password" placeholder="Password" style="position: relative; top: 10px;">
-                            <p style="position: relative; top: -60px;">Password</p>
+                            <label for="login-password-control">Password</label>
+                            <input class="form-control" id="login-password-control" type="password" placeholder="Password">
                             <small class="invalid-feedback"></small>
                         </div>
-                        <div class="form-group">
+                        <fieldset>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="remember" id="login-remmeber-control">
-                                <label class="form-check-label">Keep me logged in</label>
+                                <input class="form-check-input" type="checkbox" value="remember" id="login-remember-control">
+                                <label class="form-check-label" for="login-remember-control">Keep me logged in</label>
                             </div>
-                        </div>
+                        </fieldset>
                         <button class="btn btn-primary" id="login-login-button" type="submit">Login</button>
                         <button class="btn btn-link text-danger ml-3" id="login-forgot-button" type="button">Forgot password</button>
                     </form>
@@ -151,7 +151,7 @@
 
             <div class="col-12 col-md-7 mt-4 register">
                 <div class="p-4 bg-white">
-                    <div class="text-primary mb-4 title">Create new account</div>
+                    <h1 class="text-primary mb-4 title">Create new account</h1>
                     <div class="text-danger mb-4 d-none subtitle" id="register-error">Please correct the error(s)</div>
                     <ul class="sr-only" id="register-error-list"></ul>
                     <form id="register-form" novalidate>
@@ -222,9 +222,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <div class="container-fluid bg-dark mt-4 footer">
+    <footer class="container-fluid bg-dark mt-4 footer">
         <div class="container text-center py-3">
             <div class="row justify-content-around">
                 <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=About">About</a>
@@ -234,7 +234,7 @@
                 <a class="col-12 col-md mr-3 text-white" href="./empty.html?title=Privacy+policy">Privacy policy</a>
             </div>
         </div>
-    </div>
+    </footer>
 
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/popper.js"></script>
