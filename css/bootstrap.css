@@ -5714,7 +5714,7 @@ button.bg-success:hover {
 }
 
 .bg-info {
-    background-color: #4b8a7d !important
+    background-color: #3E7468 !important
 }
 
 a.bg-info:focus,
@@ -8193,7 +8193,7 @@ a.text-primary:hover {
 }
 
 .text-secondary {
-    color: #6c757d !important
+    color: #42474C !important
 }
 
 a.text-secondary:focus,
@@ -8211,7 +8211,7 @@ a.text-success:hover {
 }
 
 .text-info {
-    color: #4b8a7d !important
+    color: #355F56 !important
 }
 
 a.text-info:focus,
