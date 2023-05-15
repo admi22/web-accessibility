@@ -53,19 +53,24 @@ document.addEventListener('DOMContentLoaded', function() {
 /**
  * Allow user to increase and decrease the global font size
  */
+
 function increaseFontSize() {
-    var fontSize = parseInt(document.body.style.fontSize) || 100;
-    fontSize += 10;
-    document.body.style.fontSize = fontSize + '%';
+    let fontSize = parseFloat(window.getComputedStyle(document.body).getPropertyValue('font-size')) + 2;
+
+    document.body.style.fontSize = fontSize + 'px';
+    localStorage.setItem("fontSize", fontSize + 'px');
 }
 
 function decreaseFontSize() {
-    var fontSize = parseInt(document.body.style.fontSize) || 100;
-    fontSize -= 10;
-    document.body.style.fontSize = fontSize + '%';
+
+    let fontSize = parseFloat(window.getComputedStyle(document.body).getPropertyValue('font-size')) - 2;
+
+    document.body.style.fontSize = fontSize + 'px';
+    localStorage.setItem("fontSize", fontSize + 'px');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    document.body.style.fontSize = localStorage.getItem("fontSize");
     document.querySelector('.font-increase-button')
         .addEventListener('click', increaseFontSize, false);
     document.querySelector('.font-decrease-button')
