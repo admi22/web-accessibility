@@ -147,6 +147,17 @@ function register(event) {
         setValid(password);
     }
 
+    var repeatpassword = document.getElementById('repeat-password-control');
+    if (repeatpassword.value !== password.value){
+        setInvalid(repeatpassword);
+        hasError = true;
+    }else{
+        setValid(repeatpassword)
+    }
+
+
+
+
     var programme = document.getElementById('register-programme-control');
     if (programme.validity.valueMissing) {
         setInvalid(programme);
