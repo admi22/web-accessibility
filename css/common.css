@@ -20,7 +20,7 @@ body a:hover {
 
 .title {
     font-size: 2rem;
-    font-weight: 100
+    font-weight: 400
 }
 
 .subtitle {
@@ -34,7 +34,8 @@ body a:hover {
 
 .header .title {
     font-size: 1.5rem;
-    line-height: 1.8rem
+    line-height: 1.8rem;
+    color: black;
 }
 
 .header .font-increase-button,
