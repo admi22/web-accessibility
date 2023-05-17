@@ -78,3 +78,27 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.font-decrease-button')
         .addEventListener('click', decreaseFontSize, false);
 }, false);
+
+document.addEventListener('DOMContentLoaded', function() {
+    // select all article elements inside the section.news
+    var articleElements = document.querySelectorAll('section.news article');
+    console.log(articleElements);
+
+    // loop over all article elements
+    for (var i = 0; i < articleElements.length; i++) {
+        // find the a element inside the article and read the href attribute
+        var articleElement = articleElements[i];
+
+        // add a click event listener to the article element
+        articleElement.addEventListener('click', function() {
+            // find the a element inside the article and read the href attribute
+            var linkElement = this.querySelector('a');
+            var href = linkElement.getAttribute('href');
+            console.log(href);
+                    
+            // navigate to the href url
+            window.location.href = href;
+        });
+        console.log(articleElement);
+    }
+}, false);
