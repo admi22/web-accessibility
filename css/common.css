@@ -49,7 +49,10 @@ body a:hover {
 .footer,
 .header,
 .nav {
-    flex: 0 0 auto
+    flex: 0 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .main {
