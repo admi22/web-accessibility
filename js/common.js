@@ -55,17 +55,19 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 
 function increaseFontSize() {
-    let fontSize = parseFloat(window.getComputedStyle(document.body).getPropertyValue('font-size')) + 2;
+    let fontSize = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('font-size')) + 2;
 
-    document.body.style.fontSize = fontSize + 'px';
+    // set font size of html element
+
+    document.documentElement.style.fontSize = fontSize + 'px';
     localStorage.setItem("fontSize", fontSize + 'px');
 }
 
 function decreaseFontSize() {
 
-    let fontSize = parseFloat(window.getComputedStyle(document.body).getPropertyValue('font-size')) - 2;
+    let fontSize = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('font-size')) - 2;
 
-    document.body.style.fontSize = fontSize + 'px';
+    document.documentElement.style.fontSize = fontSize + 'px';
     localStorage.setItem("fontSize", fontSize + 'px');
 }
 
