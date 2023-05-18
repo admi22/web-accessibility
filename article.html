@@ -12,16 +12,20 @@
 </head>
 
 <body class="d-flex flex-column bg-light">
+    <a href="#main" class="sr-only sr-only-focusable">Skip to main content</a>
+    <a href="#nav-bar-content" class="sr-only sr-only-focusable">Skip to navigation</a>
     <header class="container-fluid d-none d-lg-block my-4 header">
         <div class="container">
             <div class="row no-gutters">
-                <div class="col-8 media">
+                <div class="col-8">
+                    <a class="media" href="index.html">
                     <img class="align-self-center mr-3 rounded-right logo" src="./img/logo.jpg" alt="Logo of Lorem Ipsum Institute">
                     <div class="media-body align-self-center">
-                        <div class="mb-0 title">Lorem Ipsum
+                        <div   role="heading" class="mb-0 title">Lorem Ipsum
                             <br>Institute of Technology
                         </div>
                     </div>
+                    </a>
                 </div>
                 <div class="col-4">
                     <div class="btn-toolbar justify-content-end">
@@ -39,118 +43,91 @@
         <div class="container">
             <div class="navbar navbar-dark bg-dark navbar-expand-lg px-0">
                 <div class="navbar-brand d-lg-none">
-                    <img class="rounded-right" src="./img/logo.jpg" width="40" height="40"alt="Logo of Lorem Ipsum Institute">
+                    <a class="media" href="index.html">
+                        <img class="rounded-right" src="./img/logo.jpg" width="40" height="40"alt="Logo of Lorem Ipsum Institute">
+                    </a>
+                </div>
+                <button class="navbar-toggler" role="button" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="nav-bar-content">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="./">Homepage</a></li>
+                        <li class="nav-item dropdown" id="nav-bar-faculties">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faculties</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied sciences</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture &amp; planning</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction &amp; environment</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="./empty.html?title=Engineering">Engineering</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health &amp; social sciences</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" id="nav-bar-education">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Education &amp; research</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="./empty.html?title=Master">Master</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing education</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" id="nav-bar-industry">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Industry &amp; partners</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="dropdown-item" href="./empty.html?title=Public+relations">Public relations</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="./empty.html?title=Commercialization">Commercialization</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors &amp; partners</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+                    </ul>
                 </div>
 
-                <div class="collapse navbar-collapse" id="nav-bar-content">
-                    <div class="navbar-nav mr-auto">
-                        <div class="nav-item">
-                            <a class="nav-link" href="./">Homepage</a>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-faculties">Faculties</a>
-                            <div class="dropdown-menu">
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Applied+sciences">Applied sciences</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Architecture+%26+planning">Architecture &amp; planning</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Construction+%26+environment">Construction &amp; environment</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Engineering">Engineering</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Health+%26+social+sciences">Health &amp; social sciences</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-education">Education &amp; research</a>
-                            <div class="dropdown-menu">
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Bachelor">Bachelor</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Master">Master</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Continuing+education">Continuing education</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Doctorate">Doctorate</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="nav-bar-industry">Industry &amp; partners</a>
-                            <div class="dropdown-menu">
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Public+relations">Public relations</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Commercialization">Commercialization</a>
-                                </div>
-                                <div>
-                                    <a class="dropdown-item" href="./empty.html?title=Sponsors+%26+partners">Sponsors &amp; partners</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="navbar-nav">
-                        <div class="nav-item">
-                            <a class="nav-link" href="./login.html">Login</a>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="d-lg-none">
                 <div class="btn-toolbar justify-content-end">
-                    <div class="btn-group btn-group-sm">
-                        <button class="btn btn-dark text-white font-increase-button" id="font-increase-button-1">A+</button>
-                        <button class="btn btn-dark text-white font-decrease-button" id="font-decrease-button-1">A-</button>
+                    <div class="btn-group btn-group-sm mb-2">
+                        <button class="btn btn-light text-dark font-increase-button" id="font-increase-button-1">A+</button>
+                        <button class="btn btn-light text-dark font-decrease-button" id="font-decrease-button-1">A-</button>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="container mt-4 main" id="main">
-        <article class="p-5 bg-white">
-            <h1 class="text-primary text-center mb-4 title">Global temperature record shows 2016 as the warmest year on record</h1>
-            <figure class="text-center wrapper">
+    <main class="container mt-4 main" id="main" role="main">
+        <article class="p-5 bg-white" aria-labelledby="article-title">
+            <h1 class="text-primary text-center mb-4 title" id=”article-title">Global temperature record shows 2016 as the warmest year on record</h1>
+            <figure class="text-center wrapper" role="figure">
                 <img src="./img/temperature.jpg" class="figure-img img-fluid" alt="Chart comparing years from 1880 until 2020 versus Temperature Anomaly (C) showing an upwards trend. Described in the following paragraphs full text and table.">
                 <figcaption class="figure-caption text-center px-5">The graphic shows the global mean surface temperature change since 1880 till nowadays. The grey curve indicates
                     the annual average temperature and the black curve shows the smoothed result. Over the last two centuries,
                     the mean tempurature has increased by around 1 degree Celcius.</figcaption>
                 </figure>
-            <p>The global temperature record shows the fluctuations of the temperature of the atmosphere and the oceans through
+            <p id="caption">The global temperature record shows the fluctuations of the temperature of the atmosphere and the oceans through
                 various spans of time. The recently data published by NASA is one of the most detailed information exists
                 since 1850, when methodical thermometer-based records began.
             </p>
             <p>Sixteen of the 17 warmest years in the 136-year record all have occurred since 2001, with the exception of 1998.
                 The year 2016 ranks as the warmest on record.</p>
-            <div class="table-responsive mt-4 wrapper">
-                <table class="table text-center">
-                    <col>
-                    <col>
-                    <colgroup span="2"></colgroup>
-                    <tbody class="thead-dark">
+            <div class="table-responsive mt-4 wrapper" >
+                <table class="table text-center" role="table">
+                    <caption>Comparison of temperature per century</caption>
+                    <thead class="thead-dark">
                         <tr>
                             <th scope="col" class="align-middle" rowspan="2">Century</th>
                             <th scope="col" class="align-middle" rowspan="2">Year</th>
-                            <th colspan="2" scope="col" class="align-middle" colspan="2">Temperature</th>
+                            <th scope="col" class="align-middle" colspan="2">Temperature</th>
                         </tr>
                         <tr>
                             <th scope="col" class="align-middle">Average</th>
                             <th scope="col"  class="align-middle">Smoothed</th>
                         </tr>
-                    </tbody>
-                    <tbody>
+                    </thead>
+                    <tbody class="thead-dark">
                         <tr>
-                            <th scope="row" rowspan="2" class="align-middle" rowspan="2">19th century</th>
+                            <th scope="row" class="align-middle" rowspan="2">19th century</th>
                             <td>1880</td>
                             <td>-0.20</td>
                             <td>-0.13</td>
@@ -160,10 +137,8 @@
                             <td>-0.37</td>
                             <td>-0.26</td>
                         </tr>
-                    </tbody>
-                    <tbody>
                         <tr>
-                            <th scope="row" rowspan="2" class="align-middle" rowspan="2">20th century</th>
+                            <th scope="row" class="align-middle" rowspan="2">20th century</th>
                             <td>1920</td>
                             <td>-0.27</td>
                             <td>-0.26</td>
@@ -173,10 +148,8 @@
                             <td>0.44</td>
                             <td>0.34</td>
                         </tr>
-                    </tbody>
-                    <tbody>
                         <tr>
-                            <th  scope="row" rowspan="2" class="align-middle" rowspan="2">21st century</th>
+                            <th scope="row" class="align-middle" rowspan="2">21st century</th>
                             <td>2000</td>
                             <td>0.42</td>
                             <td>0.52</td>
@@ -212,6 +185,60 @@
     <script type="text/javascript" src="./js/bootstrap.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="./js/article.js"></script>
+    <script type="text/javascript">
+        // event listener for open and closing of menus
+
+        const subMenus = document.querySelectorAll('.dropdown-menu');
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                for (const subMenu of subMenus) {
+                    if (subMenu.classList.contains('show')) {
+                        subMenu.classList.remove('show');
+                        subMenu.parentElement.querySelector('.dropdown-toggle').focus();
+                        break;
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        //event listener to go through drop-down with SPACE
+
+        const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+
+        dropdownMenus.forEach((menu) => {
+            menu.querySelectorAll('.dropdown-item').forEach((item) => {
+                item.addEventListener('keydown', (event) => {
+                    if (event.key === ' ' || event.key === 'Enter') {
+                        event.preventDefault();
+                        item.click();
+                    }
+                });
+            });
+        });
+
+    </script>
+
+    <script type="text/javascript">
+
+        //add tab interaction to close menus
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+        for (const dropdownToggle of dropdownToggles) {
+            dropdownToggle.addEventListener('keydown', (event) => {
+                if (event.key === 'Tab') {
+                    const dropdownMenu = dropdownToggle.nextElementSibling;
+                    if (dropdownMenu.classList.contains('show')) {
+                        dropdownMenu.classList.remove('show');
+                    }
+                }
+            });
+        }
+
+
+    </script>
 </body>
 
 </html>

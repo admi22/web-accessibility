@@ -53,21 +53,73 @@ document.addEventListener('DOMContentLoaded', function() {
 /**
  * Allow user to increase and decrease the global font size
  */
+
 function increaseFontSize() {
-    var fontSize = parseInt(document.body.style.fontSize) || 100;
-    fontSize += 10;
-    document.body.style.fontSize = fontSize + '%';
+    let fontSize = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('font-size')) + 2;
+    if (localStorage.getItem("fontSize") !== null) {
+        fontSize = parseInt(localStorage.getItem("fontSize")) + 2;
+    }
+
+    // set font size of html element
+
+    document.documentElement.style.fontSize = fontSize + 'px';
+    localStorage.setItem("fontSize", fontSize + 'px');
 }
 
 function decreaseFontSize() {
-    var fontSize = parseInt(document.body.style.fontSize) || 100;
-    fontSize -= 10;
-    document.body.style.fontSize = fontSize + '%';
+    let fontSize = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('font-size')) - 2;
+    if (localStorage.getItem("fontSize") !== null) {
+        fontSize = parseInt(localStorage.getItem("fontSize")) - 2;
+    }
+    document.documentElement.style.fontSize = fontSize + 'px';
+    localStorage.setItem("fontSize", fontSize + 'px');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('.font-increase-button')
+    // document.body.style.fontSize = localStorage.getItem("fontSize");
+    document.querySelector('#font-increase-button')
         .addEventListener('click', increaseFontSize, false);
-    document.querySelector('.font-decrease-button')
+    document.querySelector('#font-decrease-button')
         .addEventListener('click', decreaseFontSize, false);
+    document.querySelector('#font-increase-button-1')
+        .addEventListener('click', increaseFontSize, false);
+    document.querySelector('#font-decrease-button-1')
+        .addEventListener('click', decreaseFontSize, false);
+
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    for (const dropdownToggle of dropdownToggles) {
+        dropdownToggle.addEventListener('blur', (event) => {
+            console.log("blur event called")
+            const elMenu = document.querySelector('.navbar-nav');
+            const dropdownMenu = dropdownToggle.nextElementSibling;
+            if (dropdownMenu.classList.contains('show') && !elMenu.contains(event.relatedTarget)) {
+                console.log("contains class")
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    }
+}, false);
+
+document.addEventListener('DOMContentLoaded', function() {
+    // select all article elements inside the section.news
+    var articleElements = document.querySelectorAll('section.news article');
+    console.log(articleElements);
+
+    // loop over all article elements
+    for (var i = 0; i < articleElements.length; i++) {
+        // find the a element inside the article and read the href attribute
+        var articleElement = articleElements[i];
+
+        // add a click event listener to the article element
+        articleElement.addEventListener('click', function() {
+            // find the a element inside the article and read the href attribute
+            var linkElement = this.querySelector('a');
+            var href = linkElement.getAttribute('href');
+            console.log(href);
+                    
+            // navigate to the href url
+            window.location.href = href;
+        });
+        console.log(articleElement);
+    }
 }, false);

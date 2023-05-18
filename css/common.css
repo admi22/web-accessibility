@@ -11,6 +11,7 @@ body a,
 body div,
 body p {
     /* color: #dfdfdf */
+    font-size: 1rem;
 }
 
 body a:hover {
@@ -19,7 +20,7 @@ body a:hover {
 
 .title {
     font-size: 2rem;
-    font-weight: 100
+    font-weight: 400
 }
 
 .subtitle {
@@ -33,7 +34,8 @@ body a:hover {
 
 .header .title {
     font-size: 1.5rem;
-    line-height: 1.8rem
+    line-height: 1.8rem;
+    color: black;
 }
 
 .header .font-increase-button,
@@ -43,13 +45,26 @@ body a:hover {
 
 .header .font-decrease-button,
 .nav .font-decrease-button {
-    font-size: .6rem
+    font-size: .8rem
+}
+
+.nav-link:active, .nav-link:focus, .nav-link:hover{
+    background-color: #fff !important;
+    color: black !important;
+}
+
+.nav-item .dropdown-item:hover, .nav-item .dropdown-item:focus, .nav-item .dropdown-item:active  {
+    background-color: #343a40 !important;
+    color: white !important;
 }
 
 .footer,
 .header,
 .nav {
-    flex: 0 0 auto
+    flex: 0 0 auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .main {
