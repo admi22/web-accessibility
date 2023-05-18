@@ -56,6 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function increaseFontSize() {
     let fontSize = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('font-size')) + 2;
+    if (localStorage.getItem("fontSize") !== null) {
+        console.log("from localstorage")
+        fontSize = parseInt(localStorage.getItem("fontSize")) + 2;
+    }
 
     // set font size of html element
 
@@ -64,18 +68,24 @@ function increaseFontSize() {
 }
 
 function decreaseFontSize() {
-
     let fontSize = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('font-size')) - 2;
-
+    if (localStorage.getItem("fontSize") !== null) {
+        console.log("from localstorage")
+        fontSize = parseInt(localStorage.getItem("fontSize")) - 2;
+    }
     document.documentElement.style.fontSize = fontSize + 'px';
     localStorage.setItem("fontSize", fontSize + 'px');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.body.style.fontSize = localStorage.getItem("fontSize");
-    document.querySelector('.font-increase-button')
+    // document.body.style.fontSize = localStorage.getItem("fontSize");
+    document.querySelector('#font-increase-button')
         .addEventListener('click', increaseFontSize, false);
-    document.querySelector('.font-decrease-button')
+    document.querySelector('#font-decrease-button')
+        .addEventListener('click', decreaseFontSize, false);
+    document.querySelector('#font-increase-button-1')
+        .addEventListener('click', increaseFontSize, false);
+    document.querySelector('#font-decrease-button-1')
         .addEventListener('click', decreaseFontSize, false);
 }, false);
 
