@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
 function increaseFontSize() {
     let fontSize = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('font-size')) + 2;
     if (localStorage.getItem("fontSize") !== null) {
-        console.log("from localstorage")
         fontSize = parseInt(localStorage.getItem("fontSize")) + 2;
     }
 
@@ -70,7 +69,6 @@ function increaseFontSize() {
 function decreaseFontSize() {
     let fontSize = parseFloat(window.getComputedStyle(document.documentElement).getPropertyValue('font-size')) - 2;
     if (localStorage.getItem("fontSize") !== null) {
-        console.log("from localstorage")
         fontSize = parseInt(localStorage.getItem("fontSize")) - 2;
     }
     document.documentElement.style.fontSize = fontSize + 'px';

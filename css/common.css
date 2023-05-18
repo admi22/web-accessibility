@@ -48,9 +48,14 @@ body a:hover {
     font-size: .8rem
 }
 
-.font-button-inverted {
-    color: black;
-    background-color: white;
+.nav-link:active, .nav-link:focus, .nav-link:hover{
+    background-color: #fff !important;
+    color: black !important;
+}
+
+.nav-item .dropdown-item:hover, .nav-item .dropdown-item:focus, .nav-item .dropdown-item:active  {
+    background-color: #343a40 !important;
+    color: white !important;
 }
 
 .footer,
