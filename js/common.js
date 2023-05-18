@@ -85,6 +85,19 @@ document.addEventListener('DOMContentLoaded', function() {
         .addEventListener('click', increaseFontSize, false);
     document.querySelector('#font-decrease-button-1')
         .addEventListener('click', decreaseFontSize, false);
+
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    for (const dropdownToggle of dropdownToggles) {
+        dropdownToggle.addEventListener('blur', (event) => {
+            console.log("blur event called")
+            const elMenu = document.querySelector('.navbar-nav');
+            const dropdownMenu = dropdownToggle.nextElementSibling;
+            if (dropdownMenu.classList.contains('show') && !elMenu.contains(event.relatedTarget)) {
+                console.log("contains class")
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    }
 }, false);
 
 document.addEventListener('DOMContentLoaded', function() {
