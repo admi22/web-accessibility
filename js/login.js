@@ -163,7 +163,10 @@ function register(event) {
     } else {
         document.getElementById('register-error').classList.add('d-none');
     }
+    
 }
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     document
@@ -177,4 +180,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document
         .getElementById('register-register-button')
         .addEventListener('click', register, false);
+  
+    
 }, false);

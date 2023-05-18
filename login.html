@@ -153,7 +153,7 @@
             <div class="col-12 col-md-7 mt-4 register" aria-labelledby="registration">
                 <div class="p-4 bg-white">
                     <h1 class="text-primary mb-4 title" id="registration">Create new account</h1>
-                    <div class="text-danger mb-4 d-none subtitle" id="register-error" aria-live="polite">Please correct the error(s)</div>
+                    <div class="text-danger mb-4 d-none subtitle" id="register-error" aria-live="polite">Please correct the errors</div>
                     <ul class="sr-only" id="register-error-list" aria-labelledby="register-error"></ul>
                     <form id="register-form" novalidate>
                         <fieldset>
@@ -244,6 +244,23 @@
     <script type="text/javascript" src="./js/bootstrap.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript" src="./js/login.js"></script>
+    <script type="text/javascript">
+    function keep_me() {
+        var checkbox = document.getElementById('login-remember-control');
+        if (checkbox.checked) {
+          checkbox.setAttribute('aria-checked', 'true');
+        } else {
+          checkbox.setAttribute('aria-checked', 'false');
+        }
+      }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        document
+            .getElementById('login-remember-control')
+            .addEventListener('click', keep_me, false);
+        
+    }, false); 
+    </script>
 </body>
 
 </html>
